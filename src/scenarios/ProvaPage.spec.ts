@@ -32,5 +32,11 @@ test.describe('Testes sobre formulario para prova', () => {
   });
 
 
+  test('Testar validadores de erro email', async ({ page }) => {
+    await page.goto(BASE_URL);
+  
+    const aiArgs = { page, test };
+    await ai('enter values without email and validate', aiArgs);
+  });
 
 });
