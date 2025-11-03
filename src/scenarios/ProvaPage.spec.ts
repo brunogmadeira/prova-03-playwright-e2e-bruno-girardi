@@ -36,7 +36,7 @@ test.describe('Testes sobre formulario para prova', () => {
     await page.goto(BASE_URL);
   
     const aiArgs = { page, test };
-    await ai('enter values without email and validate', aiArgs);
+    await ai('Preencha todos os campos do formulário exibido na tela, exceto o campo com seletor input[id="replyto"].Depois de enviar o formulário, verifique se aparece a seguinte mensagem de erro na tela:<div class="fieldErrorBox">Seu endereço de e-mail é obrigatório, favor corrija.</div>Confirme que essa mensagem está visível e contém exatamente o texto:"Seu endereço de e-mail é obrigatório, favor corrija.")', aiArgs);
   });
 
 });
